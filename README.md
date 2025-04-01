@@ -1,4 +1,4 @@
-# NextAuth DynamoDB Boilerplate
+# Next-AWS Latest Boilerplate 2025
 
 A complete authentication solution using NextAuth.js with Google and GitHub OAuth providers, integrated with Amazon DynamoDB for user data storage.
 
@@ -177,3 +177,14 @@ bun run start
 ## License
 
 This project is licensed under the MIT License
+
+Screenshots:
+
+![image](https://github.com/user-attachments/assets/dd18e356-2f60-4d06-aae5-efa894a2c76e)
+
+![image](https://github.com/user-attachments/assets/fbed40e4-6b70-4828-8de0-b17c389946e1)
+
+![image](https://github.com/user-attachments/assets/d0b69897-a08f-4bed-af54-7c63b34ad6a2)
+
+
+
